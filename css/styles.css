@@ -1,0 +1,85 @@
+p {
+  margin: 20px;
+  padding: 10px;
+  background: red;
+  color: white;
+}
+#p2 {
+  background: hotpink;
+}
+#p3 {
+  background: green;
+}
+.pbleu {
+  background: cyan;
+}
+
+.bordure {
+  border-style: dashed;
+}
+.connecter {
+  border-style: solid;
+  width: 500px;
+  height: 150px;
+}
+.voyage {
+  border-style: double;
+  width: 400px;
+  height: 200px;
+  color: orange;
+}
+.nounours {
+  border-style: dotted;
+  width: 600px;
+  height: 180px;
+  color: blue;
+}
+#p4 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border: 3px solid black;
+  width: 300px;
+  height: 200px;
+  color: yellow;
+
+  padding-top: 60px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  background-color: blue;
+}
+.container {
+  display: flex; /*or inline-flex*/
+}
+#p5 {
+  background-color: rgba(255, 40, 194, 0.4);
+}
+#p6 {
+  background-color: hsla(145, 100%, 50%, 0.5);
+}
+#p7 {
+  background-color: rgb(71, 99, 255);
+}
+#p8 {
+  background-color: #ddff47;
+}
+#p9 {
+  background-color: hsl(0, 100%, 64%);
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+ /* visited link */
+a:visited {
+  color: green;
+}
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+/* selected link */
+a:active {
+  color: blue;
+}
+ul.a{ list-style-type: disc;}

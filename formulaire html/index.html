@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <h2>Html forme</h2>
+    <form action="/action_page.php">
+      <label for="fname">prenom:</label><br />
+      <input type="text" id="fname" name="fname" value="tony" /><br />
+      <label for="lname">nom:</label><br />
+      <input type="text" id="lname" name="lname" value="mellier" /><br /><br />
+      <input type="submit" value="entrer" />
+    </form>
+    <h2>bouton radio</h2>
+
+    <form>
+      <input type="radio" id="manger" name="gender" value="manger" />
+      <label for="manger">manger</label><br />
+      <input type="radio" id="boire" name="gender" value="boire" />
+      <label for="boire">boire</label><br />
+      <input type="radio" id="boire" name="gender" value="diner" />
+      <label for="boire">boire</label>
+    </form>
+    <h2>case a cocher</h2>
+    <form action="/action_page.php">
+      <input type="checkbox" id="manger" name="manger" value="manger" />
+      <label for="manger"> j'ai manger</label><br />
+      <input type="checkbox" id="bue" name="bue" value="bue" />
+      <label for="bue"> j'ai bue</label><br />
+      <input type="checkbox" id="diner" name="diner" value="diner" />
+      <label for="diner"> j'ai diner</label><br /><br />
+      <input type="submit" value="entrer" />
+    </form>
+    <h2>l'attribut de mon pour imput</h2>
+    <form action="file:///C:/Users/59013-76-08/Desktop/Projet/idex.html">
+      <label for="fname">prenom:</label><br />
+      <input type="text" id="fname" value="tony" /><br /><br />
+      <input type="submit" value="entrer" />
+    </form>
+    <h2>l'attribut cible du formulaire</h2>
+    <form
+      action="file:///C:/Users/59013-76-08/Desktop/Projet/idex.html"
+      target="_blank"
+    >
+      <label for="fname">prenom:</label><br />
+      <input type="text" id="prenom" name="prenom" value="tony" /><br />
+      <label for="lname">nom:</label><br />
+      <input type="text" id="nom" name="nom" value="mellier" /><br /><br />
+      <input type="submit" value="entrer" />
+    </form>
+    <h2>l'attribut de methode</h2>
+    <form action="/action_page.php" target="_blank" method="get">
+      <label for="fname">prenom:</label><br>
+      <input type="text" id="prenom" name="prenom" value="tony"><br>
+      <label for="lname">nom:</label><br>
+      <input type="text" id="nom" name="nom" value="mellier"><br><br>
+      <input type="submit" value="entrer">
+    </form>
+  </body>
+</html>

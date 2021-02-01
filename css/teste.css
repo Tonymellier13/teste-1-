@@ -1,0 +1,65 @@
+.nul {
+  background-image: url("../images/home_circle_icon_137496.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-left: 160px;
+  padding-top: 20px;
+  background-size: 150px 100px;
+}
+.emblok {
+  background-image: url("../images/icone-formation-accueil-service-hover-01.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-right: 1000px;
+
+  background-size: 200px;
+}
+.circle {
+  background-image: url("../images/home_circle_icon_137496.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding-right: 110px;
+  background-size: 100px 50px;
+}
+#p1 {
+  border: 3px solid blueviolet;
+  border-top: solid cyan;
+  border-bottom: solid green;
+  border-left: solid yellow;
+}
+.tableau,
+th,
+td {
+  border: 2px solid red;
+}
+#p2 {
+  min-width: 30px;
+  background-color: blue;
+}
+#p3 {
+  max-width: 100px;
+  background-color: greenyellow;
+}
+body {
+  font-family: "roboto", sans-serif;
+}
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: #00ff40;
+}
+ul.a{ list-style-type: disc;}
