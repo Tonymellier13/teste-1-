@@ -12,9 +12,193 @@
 
     <title></title>
   </head>
-  <body>
-    <div>
-      <!-- <h1>Mon H1 <b>est en gras</b></h1>
+  <body onload="affichage()">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend"></div>
+      <select class="select" id="choix">
+        <option selected>Choose...</option>
+        <option id="choix1" value="sandwich">sandwich</option>
+        <option id="choix2" value="pizza">pizza</option>
+        <option id="choix3" value="burger">burger</option>
+      </select>
+    </div>
+
+    <div class="form-check d-none options sandwich">
+      <div>
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="oignon"
+          id="oignon"
+        />
+        <label class="form-check-label" for="defaultCheck1"> oignon </label>
+      </div>
+      <div>
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="mayo"
+          id="mayo"
+        />
+        <label class="form-check-label" for="defaultCheck1"> mayo </label>
+      </div>
+
+      <div>
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value="poulet"
+          id="poulet"
+        />
+        <label class="form-check-label" for="defaultCheck1"> poulet </label>
+      </div>
+    </div>
+
+    <div class="form-check d-none options pizza">
+      <div>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="pizza"
+          id="fromage"
+          value="fromage"
+        />
+        <label class="form-check-label" for="exampleRadios1"> fromage </label>
+      </div>
+      <div>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="pizza"
+          id="chorizo"
+          value="chorizo"
+        />
+        <label class="form-check-label" for="exampleRadios1"> chorizo </label>
+      </div>
+      <div>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="pizza"
+          id="savoyard"
+          value="savoyard"
+        />
+        <label class="form-check-label" for="exampleRadios1"> savoyard </label>
+      </div>
+    </div>
+    <div class="form-check d-none options burger">
+      <div>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="burger"
+          id="M"
+          value="M"
+        />
+        <label class="form-check-label" for="exampleRadios1"> M </label>
+      </div>
+      <div>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="burger"
+          id="L"
+          value="L"
+        />
+        <label class="form-check-label" for="exampleRadios1"> L </label>
+      </div>
+      <div>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="burger"
+          id="XL"
+          value="XL"
+        />
+        <label class="form-check-label" for="exampleRadios1"> XL </label>
+      </div>
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="quantite">quantité:</label>
+      <input type="number" class="form-control" id="quantite" min="1" />
+    </div>
+    <button type="button" class="btn btn-danger">VALIDER</button>
+    <form>
+      <div>
+        <label for="return"> menu</label>
+        <textarea class="form-control" id="recap" rows="2"></textarea>
+      </div>
+    </form>
+
+    <!-- <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Le produit</label>
+        <input
+          type="text"
+          class="form-control"
+          id="produit"
+          placeholder="Produit"
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">La Marque </label>
+        <input
+          type="text"
+          class="form-control"
+          id="marque"
+          placeholder="marque"
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Le Modele</label>
+        <input
+          type="text"
+          class="form-control"
+          id="modele"
+          placeholder="modele"
+        />
+      </div>
+      <div class="form-group">
+        <label for="specification">La Specification</label>
+        <input
+          type="text"
+          class="form-control"
+          id="specification"
+          placeholder="Specification"
+        />
+      </div>
+      <button id="button1" type="button" class="btn btn-primary">
+        generer
+      </button>
+      <button type="reset" class="btn btn-secondary">reinatialiser</button>
+
+      <div class="form-group">
+        <label for="validationTextarea">Textarea</label>
+        <textarea class="form-control is-invalid" id="retour"></textarea>
+      </div>
+    </form> -->
+    <!-- <div class="row">
+      <div class="col-sm-6 col-md-8 perso">
+        <img id="imageaff" src="../images/apple.png" alt="" /><br>
+
+        <img src="../images/apple.png" alt="" style="width: 5%" />
+        <p>pomme</p>
+        <img src="../images/instagram.png" alt="" style="width: 5%" />
+        <p>reseau</p>
+        <img src="../images/pinguin.png" alt="" style="width: 5%" />
+        <p>glace</p>
+        <img src="../images/nounours.jpg" alt="" style="width: 5%" />
+        <p>peluche</p>
+      </div>
+      <div class="col-6 col-md-4 persoa">
+        <p></p>
+      </div>
+    </div> -->
+
+    <!-- <div> -->
+    <!-- <h1>Mon H1 <b>est en gras</b></h1>
       <h2>mon H2</h2>
       <button onclick="modiftextH1()">texte du H1</button>
       <button onclick="modifhtmlH1()">html du H1</button>
@@ -56,21 +240,192 @@
     <h1 onclick="hideH1()">mon h1</h1>
     <h2>mon h2</h2> -->
 
+    <!-- <img
+      src="https://www.w3schools.com/images/w3jquery.gif"
+      alt="jQuery"
+      width="100"
+      height="140"
+    /><br /><br />
 
+    <button id="btn1">Insert before</button>
+    <button id="btn2">Insert after</button> -->
+    <!-- <a
+      class="btn btn-danger"
+      href="https://www.google.fr/"
+      id="google"
+      target="_blank"
+      >google</a
+    >
+    <a
+      class="btn btn-success"
+      href="https://www.microsoft.com/fr-fr/microsoft-365?rtc=1"
+      id="microsoft"
+      target="_blank"
+      >microsoft</a
+    >
+    <a
+      class="btn btn-light"
+      href="https://www.apple.com/fr/?afid=p238%7Cs05EVyND6-dc_mtid_187079nc38483_pcrid_487299106259_pgrid_16898309484_&cid=aos-fr-kwgo-brand--slid--bran-product-"
+      id=" apple"
+      target="_blank"
+      >apple</a
+    >
+    <a
+      class="btn btn-primary"
+      href="https://www.samsung.com/fr/promo/offres-d-hiver/?cid=fr_paid_ppc_google_Shop-IM_brand-EXACT-samsung_text_none_none&gclid=Cj0KCQiA4L2BBhCvARIsAO0SBdbX5_igP__vPnI4gLw1a-4MaVxNbxxpHZH-HMkwl-V1WdXqu8W_mhIaAp7cEALw_wcB&gclsrc=aw.ds"
+      id="samsung"
+      target="_blank"
+      >samsung</a
+    >
+    <button
+      type="button"
+      id="miamiam"
+      class="btn btn-lg btn-danger"
+      data-toggle="popover"
+      title="je suis tony"
+      data-content="j'aime l'harissa"
+    >
+      i love harrisa
+    </button>
+    <button id="changer">changer de lien</button>
+    <button id="changerpopo">changer popover</button> -->
 
+    <!-- <table class="tableau">
+      <thead>
+        <tr>
+          <th scope="col">1</th>
+          <th scope="col">nom</th>
 
+          <th scope="col">note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>harrisa</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>nutella</td>
+          <td>54</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>frite</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>kebab</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>coca</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>barbecue</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>fromage</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>thon</td>
+          <td>14</td>
+        </tr>
+      </tbody>
+    </table> -->
 
+    <!-- <table class="table">
 
-    <img src="https://www.w3schools.com/images/w3jquery.gif" alt="jQuery" width="100" height="140"><br><br>
-
-<button id="btn1">Insert before</button>
-<button id="btn2">Insert after</button>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">nom</th>
+          <th scope="col">note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Markaaaa</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Marktttt</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Markooo</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table> -->
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/all.min.js"></script>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script>
+      $("select").change(function () {
+        $(".sandwich,.pizza,.burger").addClass("d-none");
+        $("." + $("#choix").val()).removeClass("d-none");
+      });
+      $('[type="button"]').click(function () {
+        let c = [];
+        $("." + $("#choix").val() + " :checked").each(function () {
+          c.push($(this).val());
+        });
+        console.log(c);
+        $("#recap").val(
+          $("#quantite").val() + " " + $("#choix").val() + " " + c.join(",")
+        );
+      });
+      function affichage() {
+        $("." + $("#choix").val()).removeClass("d-none");
+      }
+
+      // });
+      // $("#recap").val(
+      //   $("#quantite").val() + " " + $("#choix").val() + " " + c.join(",")
+      // );
+      // });
+      // $("#button1").click(function () {
+      //   $("#retour").val(
+      //     $("#produit").val() +
+      //       " " +
+      //       $("#marque").val() +
+      //       " \n" +
+      //       $("#modele").val() +
+      //       " " +
+      //       $("#specification").val()
+      //   );
+      // });
+      // $(".persoa p").text($("p:first-of-type").text());
+      // $("img").click(function () {
+      //   $("#imageaff").attr("src", $(this).attr("src"));
+      //   $(".persoa").text($(this).next().text());
+      // });
+
       // function hideH1() {
       //   $("h1").hide();
       // }
@@ -98,21 +453,82 @@
       // function texteH1() {
       //   alert($("imput[type=number]").val());
       // }
-      
 
-      $(document).ready(function () {
-        $("#btn1").click(function () {
-          $("img").before("<b>Before</b>");
-        });
+      // $(document).ready(function () {
+      //   $("#btn1").click(function () {
+      //     $("img").before("<b>Before</b>");
+      //   });
 
-        $("#btn2").click(function () {
-          $("img").after("<i>After</i>");
-        });
-      });
+      //   $("#btn2").click(function () {
+      //     $("img").after("<i>After</i>");
+      //   });
+      // });
+      // $("#changer").click(function () {
+      //   $("a").attr("href", "https://www.w3schools.com/");
+      //   $("a").text("w3school");
+      // });
 
+      // $(function () {
+      //   $('[data-toggle="popover"]').popover();
+      // });
+      // $("#changerpopo").click(function () {
+      //   $("#miamiam").text("heyheyhey");
+      //   $("#miamiam").attr("data-content", "je m'appele harissa ");
+      // });
+      // function note() {
+      //   let liste;
+      //   let note;
+      //   let classeNote = "";
 
+      //   $("td:last-child").each(function () {
+      //     $(this).html(
+      //       '<button class="btn btn-' +
+      //         getclass($(this).text()) +
+      //         '">' +
+      //         $(this).text() +
+      //         "</button>"
+      //     );
+      //   });
+      // }
 
-      
+      // function getclass(noteE) {
+      //   switch (true) {
+      //     case noteE < 10:
+      //       return "danger";
+      //     case noteE <= 15:
+      //       return "info";
+
+      //     default:
+      //       console.log(noteE);
+      //       return "success";
+      //   }
+      // }
+      // function note() {
+      //   let liste;
+      //   let note;
+      //   let classeNote = "";
+      //   $("td:last-child").each(function () {
+      //     $(this).html(
+      //       '<button class="btn btn-' +
+      //         getclass($(this).text()) +
+      //         '">' +
+      //         $(this).text() +
+      //         "</button>"
+      //     );
+      //   });
+      // }
+      // function getclass(noteE) {
+      //   switch (true) {
+      //     case noteE < 10:
+      //       return "danger";
+      //     case noteE <= 15:
+      //       return "info";
+
+      //     default:
+      //       console.log(noteE);
+      //       return "success";
+      //   }
+      // }
     </script>
   </body>
 </html>

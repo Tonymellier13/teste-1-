@@ -1,0 +1,13 @@
+/* .perso p {
+    display: none;
+} */
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+img:first-child {
+    width: 600px;
+    height: 400px;
+}

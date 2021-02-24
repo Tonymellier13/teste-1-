@@ -393,3 +393,198 @@ console.log(nbjour(3));
 console.log(nbjour(12));
 console.log(nbjour(2));
 console.log(nbjour(10));
+//inverser la chaine de mots
+function inverser(chaine) {
+  let d = "";
+  for (i = chaine.length - 1; i >= 0; i--) {
+    d += chaine[i];
+  }
+  return d;
+}
+let c = "abcdefghijklmnopqrstuvwxyz";
+console.log(inverser(c));
+
+function inverser1(chaine1) {
+  let d = "";
+  for (i = chaine1.length - 1; i >= 0; i--) {
+    d += chaine1[i];
+  }
+  return d;
+}
+let c1 = "hello";
+console.log(inverser1(c1));
+
+// trouver le nombre de mots
+
+function nbmots(cha) {
+  let tab = cha.split(" ");
+  return tab.length;
+}
+
+let ch = "bonjour ou oui non ah ha";
+let ch2 = "bonjour ou oui non ah ha";
+console.log(nbmots(ch));
+console.log(nbmots(ch2));
+//comparer les nbdemots
+function compare(ch, ch2) {
+  return nbmots(ch) == nbmots(ch2);
+}
+
+console.log(compare(ch, ch2));
+// donner la racine carrer d'un nombre
+function racine(nombre) {
+  return Math.sqrt(nombre);
+}
+console.log(racine(16));
+//doner le perimetre d'un rectangle
+function perimetre(longeur, largeur) {
+  return longeur * 2 + largeur * 2;
+}
+console.log(perimetre(6, 2));
+//donner le carrer d'un nombre
+function carre(coter) {
+  return coter * 4;
+}
+
+console.log(carre(5));
+// retouner un nombre si il est inferieur true est superieur false
+function some(t, k) {
+  return t + k < 100;
+}
+console.log(some(5, 5));
+console.log(some(60, 80));
+// convertire l'heure et les minute en seconde
+function converstion(heure, minute) {
+  return heure * 3600 + minute * 60;
+}
+console.log(converstion(1, 30));
+// diviser le chiffre 1 par le deuxieme
+function divisible(j, m) {
+  return j % m == 0;
+}
+console.log(divisible(8, 4));
+console.log(divisible(2, 3));
+// exercice inervser le tableau
+function inverser2(tab2) {
+  let d = "";
+  for (i = tab2.length - 1; i >= 0; i--) {
+    d += tab2[i];
+  }
+  return d;
+}
+let tab = [25, 4, 6, 9, 3, 1, 7, 5];
+console.log(inverser1(tab));
+//essay
+// function tout(fin) {
+//   let info = "";
+//   let i;
+
+//   for (i = 0; i < fin.length; i++) {
+//     let impot;
+//     let secu;
+//     let categorieage;
+//     switch (true) {
+//       case fin[i].revenu <= 1000:
+//         impot = (fin[i].revenu * 7) / 100;
+//         secu = (fin[i].revenu * 9) / 100;
+
+//         break;
+//       case fin[i].revenu <= 2000:
+//         impot = (fin[i].revenu * 11) / 100;
+//         secu = (fin[i].revenu * 18) / 100;
+//         break;
+//       case fin[i].revenu <= 3000:
+//         impot = (fin[i].revenu * 15) / 100;
+//         secu = (fin[i].revenu * 36) / 100;
+//         break;
+
+//       default:
+//         impot = (fin[i].revenu * 20) / 100;
+//         secu = (fin[i].revenu * 72) / 100;
+//         break;
+//     }
+//     switch (true) {
+//       case fin[i].age <= 10:
+//         categorieage = "enfant";
+//         break;
+//       case fin[i].age <= 20:
+//         categorieage = "ados";
+//         break;
+//       case fin[i].age <= 45:
+//         categorieage = "jeune";
+//         break;
+
+//       default:
+//         categorieage = "vieux";
+//         break;
+//     }
+//     info +=
+//       fin[i].prenom +
+//       fin[i].nom +
+//       " " +
+//       categorieage +
+//       secu +
+//       " " +
+//       impot +
+//       " " +
+//       "\n";
+//   }
+//   return info;
+// }
+function tout1(fin1) {
+  let info = "";
+  let i;
+
+  for (i = 0; i < fin1.length; i++) {
+    let impot;
+    let secu;
+    let categorieage;
+    if (fin1[i].revenu <= 1000) {
+      impot = (fin1[i].revenu * 7) / 100;
+      secu = (fin1[i].revenu * 9) / 100;
+    } else if (fin1[i].revenu <= 2000) {
+      impot = (fin1[i].revenu * 11) / 100;
+      secu = (fin1[i].revenu * 18) / 100;
+    } else if (fin1[i].revenu <= 3000) {
+      impot = (fin1[i].revenu * 15) / 100;
+      secu = (fin1[i].revenu * 36) / 100;
+    } else {
+      impot = (fin1[i].revenu * 20) / 100;
+      secu = (fin1[i].revenu * 72) / 100;
+    }
+    if (fin1[i].age <= 10) {
+      categorieage = "enfant";
+    } else if (fin1[i].age <= 15) {
+      categorieage = "ados";
+    } else if (fin1[i].age <= 20) {
+      categorieage = "jeune";
+    } else {
+      categorieage = "vieux";
+    }
+
+    info +=
+      fin1[i].prenom +
+      " " +
+      fin1[i].nom +
+      " " +
+      categorieage +
+      secu +
+      " " +
+      impot +
+       
+      "\n";
+  }
+  return info;
+}
+
+let gens = [
+  { nom: "mayo", prenom: "oeuf", age: 10, revenu: 1000 },
+  { nom: "ketchup", prenom: "tomate", age: 15, revenu: 500 },
+  { nom: "harisa", prenom: "piquant", age: 20, revenu: 10000 },
+  { nom: "xavier", prenom: "bertrand", age: 65, revenu: 2500 },
+];
+console.log(gens[2]);
+console.log(gens[0]);
+console.log(gens[1]);
+console.log(gens[3]);
+console.log(tout1(gens));
