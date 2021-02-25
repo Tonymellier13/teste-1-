@@ -11,26 +11,15 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <title>Ajax</title>
+    <title>exepmle</title>
   </head>
   <body>
+    <br />
+
     <button type="button" onclick="requete()" class="btn btn-primary">
       Primary
     </button>
-    <div id=contenu>
-
-    </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody id="bruh"></tbody>
-    </table>
+    <div id="contenu"></div>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -45,18 +34,14 @@
         });
 
         request.done(function (response) {
-          let tab = []; 
+          let tab = [];
           $.each(response, function () {
             tab.push(this.userId);
           });
-          tab = Array.from(new Set(tab));
-          console.log(tab);
-          // let x;
-          // let i = 0;
 
-          // for (i = 0; i < tab.length; i++) {
-          //   $("#bruh").append("<tr><td> " + tab[i] + "<td><tr> ");
-          // }
+          //tab=Array.from(new Set(tab));
+          tab = elimineDoublon(tab);
+          $("#contenu").html(genTab(tab));
         });
 
         request.fail(function (http_error) {
@@ -68,26 +53,26 @@
           alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
         });
       }
-      // function elimineDoublon(tab) {
-      //   let tab2 = [];
-      //   for (i=0<tab.length;i++){
-      //     if(tab2.indexof(tab[i])===1){
-      //       tab2.push(i);
-      //     }
-      //   }
-      //   return tab2;
-      // }
-      function genTab(tab) {
-        let chaine='<table class="table table-striped"><thead> <tr><th scope="col">#</th></tr>'
-        
 
-          for (i=0;i<tab.length;i++){
-           
-
+      function elimineDoublon(tab) {
+        let tab2 = [];
+        for (i = 0; i < tab.length; i++) {
+          if (tab2.indexOf(tab[i]) === -1) {
+            tab2.push(tab[i]);
           }
-          chaine+='</tbody></table';
+        }
+        return tab2;
       }
 
+      function genTab(tab) {
+        let chaine =
+          '<table class="table table-striped"><thead>   <tr><th scope="col">#</th></tr></thead><tbody>';
+        for (i = 0; i < tab.length; i++) {
+          chaine += "<tr> <td>" + tab[i] + "</td></tr>";
+        }
+        chaine += "</tbody></table>";
+        return chaine;
+      }
     </script>
   </body>
 </html>
