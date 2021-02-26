@@ -42,6 +42,32 @@
           //tab=Array.from(new Set(tab));
           tab = elimineDoublon(tab);
           $("#contenu").html(genTab(tab));
+        
+
+          $(".tar").click(function () {
+            let v = $(this).text();
+            $("p").empty();
+            console.log(v);
+
+            let rcomments = $.ajax({
+              url:
+                "https://jsonplaceholder.typicode.com/posts/" + v + "/comments",
+              method: "GET",
+              dataType: "json",
+            });
+
+            rcomments.done(function (lui) {
+              console.log(lui);
+              let x = "";
+
+              for (i = 0; i < lui.length; i++) {
+                x += "<p>" + lui[i].body;
+                ("</p>");
+              }
+              console.log(x);
+              $("#contenu").append(x);
+            });
+          });
         });
 
         request.fail(function (http_error) {
@@ -65,14 +91,23 @@
       }
 
       function genTab(tab) {
-        let chaine =
-          '<table class="table table-striped"><thead>   <tr><th scope="col">#</th></tr></thead><tbody>';
+        let chaine = "";
+
         for (i = 0; i < tab.length; i++) {
-          chaine += "<tr> <td>" + tab[i] + "</td></tr>";
+          chaine += '<button class="tar">' + tab[i] + "</button>";
         }
-        chaine += "</tbody></table>";
+        chaine += "";
+
         return chaine;
       }
+
+      // $(".tar").click(function () {
+      //   console.log(12)
+      //   let rcomments = $.ajax({
+      //     url: "https://jsonplaceholder.typicode.com/posts/1/comments",
+      //     method: "GET",
+      //     dataType: "json",
+      //   });
     </script>
   </body>
 </html>

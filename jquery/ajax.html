@@ -17,20 +17,7 @@
     <button type="button" onclick="requete()" class="btn btn-primary">
       Primary
     </button>
-    <div id=contenu>
-
-    </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody id="bruh"></tbody>
-    </table>
+    <div id="contenu"></div>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -45,7 +32,7 @@
         });
 
         request.done(function (response) {
-          let tab = []; 
+          let tab = [];
           $.each(response, function () {
             tab.push(this.userId);
           });
@@ -78,16 +65,14 @@
       //   return tab2;
       // }
       function genTab(tab) {
-        let chaine='<table class="table table-striped"><thead> <tr><th scope="col">#</th></tr>'
-        
-
-          for (i=0;i<tab.length;i++){
-           
-
-          }
-          chaine+='</tbody></table';
+        let chaine =
+          '<table class="table table-striped"><thead><tr><th scope="col">#</th></tr></thead><tbody>';
+        for (i = 0; i < tab.length; i++) {
+          chaine += "<tr> <td>" + tab[i] + "</td></tr>";
+        }
+        chaine += "</tbody></table>";
+        return chaine;
       }
-
     </script>
   </body>
 </html>
